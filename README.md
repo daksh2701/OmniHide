@@ -34,3 +34,14 @@ This folder is the brain of the project. It handles cryptography, file processin
 cd frontend
 npm install
 npm run dev
+
+**### Backend**
+# 1. Enter the backend folder
+cd backend
+
+# 2. Install required Python dependencies
+pip install -r requirements.txt
+
+# 3. Start the FastAPI server
+# It will run at http://127.0.0.1:8000
+uvicorn main:app --reload
