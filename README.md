@@ -26,22 +26,21 @@ This folder is the brain of the project. It handles cryptography, file processin
 * **`local_storage/`**: The physical directory where the server temporarily saves `cover_files`, generated `encrypted_files`, and live `chat_files`.
 
 -------------------------------------------------------------------------------------
-
 ## 🚀 How to Run Locally
 
-### Frontend
+You will need two separate terminal windows to run both servers.
+
 ```bash
+# ==========================================
+# TERMINAL 1: START THE BACKEND
+# ==========================================
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+# ==========================================
+# TERMINAL 2: START THE FRONTEND
+# ==========================================
 cd frontend
 npm install
 npm run dev
-
-**### Backend**
-# 1. Enter the backend folder
-cd backend
-
-# 2. Install required Python dependencies
-pip install -r requirements.txt
-
-# 3. Start the FastAPI server
-# It will run at http://127.0.0.1:8000
-uvicorn main:app --reload
